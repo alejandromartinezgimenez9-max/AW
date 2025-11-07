@@ -66,8 +66,6 @@
 <div class="Contenedor1">
  <h1>REGÍSTRATE AQUÍ:</h1>
  <form action="procesar-registro.php" method="post">
- <label>Correo electrónico:</label>
- <input type="text" name="correo" required><br><br>
  <label>Nombre de usuario:</label>
  <input type="text" name="usuario" required><br><br>
  <label>Contraseña:</label>
