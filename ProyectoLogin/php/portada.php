@@ -50,9 +50,9 @@ if (!isset($_SESSION['usuario'])) {
  </style>
 </head>
 <body>
- <h1 class="Contenedor1"> Bienvenido, <?php echo $_SESSION['usuario']; ?> 😎🎉
+ <h1 class="Contenedor1"> Bienvenido/a a nuestra página web <?php echo $_SESSION['usuario']; ?>!! 😎🎉
  <p>Has iniciado sesión correctamente.</p>
- <p><a href="logout.php" color: var(--color1)>Cerrar sesión</a></p>
+ <p>Si quieres cerrar sesión, haz clic <a href="logout.php" style="color: aqua;">aquí</a>.</p>
  </h1>
 </body>
 </html>

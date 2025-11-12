@@ -65,13 +65,13 @@
 <div class="Contenedor1">
  <h1>INICIA SESIÓN AQUÍ:</h1>
  <form action="procesar-login.php" method="post">
- <label>Usuario:</label>
+ <label>Nombre de usuario:</label>
  <input type="text" name="usuario" required><br><br>
  <label>Contraseña:</label>
  <input type="password" name="password" required><br><br>
- <button type="submit">Entrar</button>
+ <button type="submit">Iniciar sesión</button>
  </form>
- <p>¿No te has registrado aún? Regístrate <a href="registro.php">aquí.</a></p>
+ <p>¿No te has registrado aún? Regístrate <a href="registro.php" style="color: aqua;">aquí.</a></p>
 </div>
 </body>
 </html>
