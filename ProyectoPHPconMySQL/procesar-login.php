@@ -12,9 +12,9 @@ if ($stmt->num_rows > 0) {
  $stmt->bind_result($id, $hash);
  $stmt->fetch();
  if (password_verify($password, $hash)) {
- $_SESSION['usuario'] = $usuario;
- header("Location: portada.php");
- exit;
+  $_SESSION['usuario'] = $usuario;
+  header("Location: portada.php");
+  exit;
  } else {
  echo "<h1>Contraseña incorrecta ❌</h1>";
  echo "<p><a href='login.php'>Volver a intentar</a></p>";
