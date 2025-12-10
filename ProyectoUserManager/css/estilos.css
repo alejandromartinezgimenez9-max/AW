@@ -1,0 +1,74 @@
+ .span1 {
+    color: red; 
+    font-size: large;
+}
+p {
+    background-color: lightblue;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+.subrayado {
+    text-decoration: underline;
+}  
+.icon {
+    width: auto;
+    text-align: center;
+    pointer-events: none;
+    margin-right: 10px;
+}
+
+   .h1 {
+        color: var(--color4);
+
+    }
+
+    :root {
+        --color1: purple;
+        --color2: blue;
+        --color3: aqua;
+        --color4: #FAFF00;
+    }
+
+    button {
+        text-align: center;
+        justify-content: center;
+        display: block;
+        margin: 0 auto;
+        
+    }
+
+    button:hover {
+        transform: translateX(1px);
+        background-color: var(--color3);
+        margin: auto;
+        transition: background-color 0.4s;
+    }
+
+    body {
+        background: linear-gradient(90deg, var(--color2), var(--color1));
+        font-family: Cardo;
+        padding: 75px;
+    }
+
+    label {
+        display: inline-block;
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .Contenedor1 {
+        color: #ffffffff;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .Contenedor1 h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: var(--color4);
+    }
+    
