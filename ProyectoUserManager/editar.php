@@ -23,9 +23,9 @@ id=?");
  <title>Editar Usuario</title>
  <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-<div class="form-container">
- <h1>Editar Usuario</h1>
+<body class="page-editar">
+<div class="Contenedor1">
+ <h1>EDITAR USUARIO:</h1>
  <form method="POST">
  <input type="text" name="nombre" value="<?= $usuario['nombre'] ?>" required>
  <input type="email" name="email" value="<?= $usuario['email'] ?>" required>
@@ -35,6 +35,8 @@ id=?");
  <option value="admin" <?= $usuario['rol']=='admin'?'selected':'' ?>>Administrador</option>
  </select>
  <button class="btn" type="submit">Actualizar</button>
+ <!-- Enlace de eliminación: usar la variable correcta $usuario['id'] y confirmar acción -->
+ <a class="btn-delete" href="eliminar.php?id=<?= $usuario['id'] ?>" onclick="return confirm('¿Seguro que quieres eliminar este usuario?');">Eliminar este usuario.</a>
  </form>
 </div>
 </body>

@@ -10,9 +10,9 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
  <title>Listado de Usuarios</title>
  <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body class="page-lista">
 <div class="Contenedor1">
- <h1>Usuarios</h1>
+ <h1>USUARIOS:</h1>
  <a class="btn" href="crear.php">+ Crear Usuario</a>
  <table>
  <tr>
@@ -26,8 +26,14 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
  <td><?= $u['edad'] ?></td>
  <td><?= $u['rol'] ?></td>
  <td>
- <a class="btn-edit" href="editar.php?id=<?= $u['id'] ?>">Editar</a>
- <a class="btn-delete" href="eliminar.php?id=<?= $u['id'] ?>">Eliminar</a>
+	 <form class="action-form" action="editar.php" method="get" style="display:inline-block;margin:0;padding:0;">
+		 <input type="hidden" name="id" value="<?= $u['id'] ?>">
+		 <button class="btn-edit" type="submit">Editar</button>
+	 </form>
+	 <form class="action-form" action="eliminar.php" method="get" style="display:inline-block;margin:0;padding:0;" onsubmit="return confirm('¿Seguro que quieres eliminar este usuario?');">
+		 <input type="hidden" name="id" value="<?= $u['id'] ?>">
+		 <button class="btn-delete" type="submit">Eliminar</button>
+	 </form>
  </td>
  </tr>
  <?php endforeach; ?>
