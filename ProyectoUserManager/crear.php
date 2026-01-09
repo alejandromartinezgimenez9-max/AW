@@ -1,17 +1,37 @@
 <?php
+session_start();
 include "bdd.php";
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$usuario_id = $_SESSION['usuario_id'] ?? null;
+
+if (!$usuario_id) {
+    echo "Acceso denegado. Por favor, regístrese.";
+    echo "<a href='registro.php'>Regístrate.</a>";
+}
+if ($_POST) {
  $nombre = $_POST["nombre"];
  $email = $_POST["email"];
  $edad = $_POST["edad"];
  $rol = $_POST["rol"];
+    $usuarios_admin = ["alejandro123@gmail.com"];
+
+    if ($rol === 'admin' && !in_array($email, $usuarios_admin)) {
+        $rol = "user";
+    }
     if ($edad < 18) {
         $error = "El usuario debe ser mayor de edad.";
-    } else {
-        $stmt = $pdo->prepare("INSERT INTO usuarios (nombre,email,edad,rol) VALUES (?,?,?,?)");
-        $stmt->execute([$nombre, $email, $edad, $rol]);
-        header("Location: lista.php");
+    }
+    try {
+        $stmt = $pdo->prepare("INSERT INTO perfil (usuario_id,nombre,email,edad,rol) VALUES (?,?,?,?,?)");
+        $stmt->execute([$usuario_id, $nombre, $email, $edad, $rol]);
+        header("Location: login.php");
         exit;
+    } catch (PDOException $e) {
+        echo "Error en la base de datos: " . $e->getMessage();
     }
 }
 ?>
@@ -39,5 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
  <?php endif; ?>
  </form>
 </div>
+<script src="js/validacion.js"></script>
 </body>
 </html>

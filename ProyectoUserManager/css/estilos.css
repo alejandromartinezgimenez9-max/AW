@@ -60,7 +60,10 @@
     body.page-crear { background: linear-gradient(90deg, var(--color8), var(--color1)); }
     body.page-lista { background: linear-gradient(90deg, var(--color10), var(--color7)); }
     body.page-editar { background: linear-gradient(90deg, var(--color2), var(--color9)); }
-
+    body.page-editar { background: linear-gradient(90deg, var(--color10), var(--color7)); }
+    body.page-editar { background: linear-gradient(90deg, var(--color8), var(--color1)); }
+    body.page-editar { background: linear-gradient(90deg, var(--color6), var(--color5)); }
+    
     label {
         display: inline-block;
         width: 150px;

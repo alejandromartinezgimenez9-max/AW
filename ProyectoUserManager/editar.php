@@ -1,7 +1,7 @@
 <?php
 include "bdd.php";
 $id = $_GET["id"];
-$stmt = $pdo->prepare("SELECT * FROM usuarios WHERE id=?");
+$stmt = $pdo->prepare("SELECT * FROM perfil WHERE id=?");
 $stmt->execute([$id]);
 $usuario = $stmt->fetch();
 if ($_POST) {
@@ -9,7 +9,7 @@ if ($_POST) {
  $email = $_POST["email"];
  $edad = $_POST["edad"];
  $rol = $_POST["rol"];
- $update = $pdo->prepare("UPDATE usuarios SET nombre=?, email=?, edad=?, rol=? WHERE
+ $update = $pdo->prepare("UPDATE perfil SET nombre=?, email=?, edad=?, rol=? WHERE
 id=?");
  $update->execute([$nombre, $email, $edad, $rol, $id]);
  header("Location: lista.php");
@@ -39,5 +39,6 @@ id=?");
  <a class="btn-delete" href="eliminar.php?id=<?= $usuario['id'] ?>" onclick="return confirm('¿Seguro que quieres eliminar este usuario?');">Eliminar este usuario.</a>
  </form>
 </div>
+<script src="js/validacion.js"></script>
 </body>
 </html>

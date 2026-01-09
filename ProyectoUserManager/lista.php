@@ -1,6 +1,6 @@
 <?php
 include "bdd.php";
-$stmt = $pdo->query("SELECT * FROM usuarios");
+$stmt = $pdo->query("SELECT * FROM perfil");
 $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body class="page-lista">
 <div class="Contenedor1">
  <h1>USUARIOS:</h1>
- <a class="btn" href="crear.php">+ Crear Usuario</a>
+ <a class="btn" href="registro.php">+ Crear Usuario</a>
  <table>
  <tr>
  <th>ID</th><th>Nombre</th><th>Email</th><th>Edad</th><th>Rol</th><th>Acciones</th>
@@ -38,6 +38,9 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
  </tr>
  <?php endforeach; ?>
  </table>
+</div>
+<div>
+	<p><a href="portada.php">Volver a la portada</a></p>
 </div>
 </body>
 </html>
