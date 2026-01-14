@@ -21,7 +21,12 @@
 
    .h1 {
         color: var(--color4);
+        font-size: 100px;
 
+    }
+
+    .page-procesar-login h1 {
+        color: var(--color12);
     }
 
     :root {
@@ -36,6 +41,8 @@
         --color9: rgb(41, 0, 22);
         --color10: rgb(0, 119, 255);
         --color11: darkblue;
+        --color12: red;
+        --color13: black;
     }
 
     button {
@@ -59,6 +66,7 @@
     body.page-registro { background: linear-gradient(90deg, var(--color1), var(--color2)) !important; }
     body.page-procesar-registro { background: linear-gradient(90deg, var(--color2), var(--color1)) !important; }
     body.page-login { background: linear-gradient(90deg, var(--color5), var(--color11)) !important; }
+    body.page-procesar-login { background: linear-gradient(90deg, var(--color9), var(--color13)) !important; }
     body.page-index { background: linear-gradient(90deg, var(--color6), var(--color5)) !important; }
     body.page-crear { background: linear-gradient(90deg, var(--color8), var(--color1)) !important; }
     body.page-lista { background: linear-gradient(90deg, var(--color10), var(--color7)) !important; }

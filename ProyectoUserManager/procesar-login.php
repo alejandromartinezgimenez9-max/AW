@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="page-procesar-login">
 <?php
 session_start();
 include "bdd.php";
@@ -23,10 +32,12 @@ if($user) {
   exit;
  } else {
  echo "<h1>Contraseña incorrecta ❌</h1>";
- echo "<p><a href='login.php'>Volver a intentar</a></p>";
+ echo "<p><a href='login.php' style='color: blue;'>Volver a intentar</a></p>";
  }
 } else {
  echo "<h1>Usuario no encontrado ❌</h1>";
- echo "<p><a href='registro.php'>Registrarse</a></p>";
+ echo "<p><a href='registro.php' style='color: blue;'>Registrarse</a></p>";
 }
 ?>
+</body>
+</html>
