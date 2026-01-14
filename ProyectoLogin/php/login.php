@@ -33,7 +33,6 @@
     }
 
     body {
-        background: linear-gradient(90deg, var(--color2), var(--color1));
         font-family: Cardo;
         padding: 75px;
     }

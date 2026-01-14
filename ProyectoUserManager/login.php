@@ -3,8 +3,9 @@
 <head>
  <meta charset="UTF-8">
  <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="css/estilos.css"> 
 </head>
-<body>
+<body class="page-login">
 <div class="Contenedor1">
  <h1>INICIA SESIÓN AQUÍ:</h1>
  <form action="procesar-login.php" method="post">
@@ -14,7 +15,7 @@
  <input type="password" name="password" required><br><br>
  <button type="submit">Iniciar sesión</button>
  </form>
- <p>¿No te has registrado aún? Regístrate <a href="registro.php" style="color: aqua;">aquí.</a></p>
+ <p>¿No te has registrado aún? Regístrate <a href="registro.php" style="color: blue;">aquí.</a></p>
 </div>
 </body>
 </html>

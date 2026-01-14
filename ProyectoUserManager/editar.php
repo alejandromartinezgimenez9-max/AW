@@ -36,7 +36,7 @@ id=?");
  </select>
  <button class="btn" type="submit">Actualizar</button>
  <!-- Enlace de eliminación: usar la variable correcta $usuario['id'] y confirmar acción -->
- <a class="btn-delete" href="eliminar.php?id=<?= $usuario['id'] ?>" onclick="return confirm('¿Seguro que quieres eliminar este usuario?');">Eliminar este usuario.</a>
+ <a class="btn-delete" href="eliminar.php?id=<?= $usuario['id'] ?>" onclick="return confirm('¿Seguro que quieres eliminar este usuario? Esta acción es definitiva.');">Eliminar este usuario.</a>
  </form>
 </div>
 <script src="js/validacion.js"></script>

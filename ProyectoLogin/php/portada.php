@@ -21,7 +21,6 @@ if (!isset($_SESSION['usuario'])) {
     }
 
     body {
-        background: linear-gradient(90deg, var(--color3), var(--color2));
         font-family: Cardo;
         padding: 75px;
     }

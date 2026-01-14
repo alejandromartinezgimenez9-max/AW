@@ -30,7 +30,7 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		 <input type="hidden" name="id" value="<?= $u['id'] ?>">
 		 <button class="btn-edit" type="submit">Editar</button>
 	 </form>
-	 <form class="action-form" action="eliminar.php" method="get" style="display:inline-block;margin:0;padding:0;" onsubmit="return confirm('¿Seguro que quieres eliminar este usuario?');">
+	 <form class="action-form" action="eliminar.php" method="get" style="display:inline-block;margin:0;padding:0;" onsubmit="return confirm('¿Seguro que quieres eliminar este usuario? Esta acción es definitiva.');">
 		 <input type="hidden" name="id" value="<?= $u['id'] ?>">
 		 <button class="btn-delete" type="submit">Eliminar</button>
 	 </form>
@@ -40,7 +40,7 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
  </table>
 </div>
 <div>
-	<p><a href="portada.php">Volver a la portada</a></p>
+	<p><a href="portada.php" style="color: blue;">Volver a la portada</a></p>
 </div>
 </body>
 </html>

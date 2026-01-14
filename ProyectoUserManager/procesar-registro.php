@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="page-procesar-registro">
 <?php
 session_start();
 include "bdd.php";
@@ -25,12 +34,14 @@ error_reporting(E_ALL);
     if ($stmt->execute([$usuario, $hash])) {
     $_SESSION['usuario_id'] = $pdo->lastInsertId();
     echo "<h1>Usuario registrado correctamente</h1>";
-    echo "<p><a href='crear.php'>Crear usuario</a></p>";
+    echo "<p><a href='crear.php' style='color: blue;'>Crear usuario</a></p>";
     } else {
     echo "<h1>Error al registrar el usuario</h1>";
-    echo "<p><a href='registro.php'>Volver al registro</a></p>";
+    echo "<p><a href='registro.php' style='color: blue;'>Volver al registro</a></p>";
     }
     } catch (PDOException $e) {
     echo "<h1>Error en la base de datos: " . $e->getMessage() . "</h1>";
 }
 ?>
+</body>
+</html>
