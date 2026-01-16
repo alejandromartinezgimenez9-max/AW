@@ -12,13 +12,13 @@ if (!isset($_SESSION['usuario'])) {
  <title>Bienvenida</title>
    <link rel="stylesheet" href="css/estilos.css">
 </head>
+</body>
 <body class="page-portada">
- <h1 class="Contenedor1"> Bienvenido/a a nuestra página web <?php echo $_SESSION['usuario']; ?>!! 😎🎉
- <p>Has iniciado sesión correctamente.</p>
- <p>Si quieres cerrar sesión, haz clic <a href="logout.php" style="color: blue;">aquí</a>.</p>
- <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] === 'admin'): ?>
-    <p>Como administrador, puedes acceder a la <a href="index.php" style="color: blue;">página de administración</a>.</p>
- <?php endif; ?>
- </h1>
+<h1 class="Contenedor1">Bienvenido/a a nuestra página web <?php echo $_SESSION['usuario']; ?>!! 😎🎉 <br> Has iniciado sesión correctamente.
+   <p>Si quieres cerrar sesión, haz clic <a href="logout.php" style="color: blue;">aquí</a>.</p>
+   <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] === 'admin'): ?>
+      <p>Como administrador, puedes acceder a la <a href="index.php" style="color: blue;">página de administración</a>.</p>
+   <?php endif; ?>
+</h1>
 </body>
 </html>
