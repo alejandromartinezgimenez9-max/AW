@@ -11,9 +11,13 @@ if ($_POST) {
  $rol = $_POST["rol"];
  $update = $pdo->prepare("UPDATE perfil SET nombre=?, email=?, edad=?, rol=? WHERE
 id=?");
+  if ($edad < 18) {
+   $error = "El usuario debe ser mayor de edad.";
+  } else {
  $update->execute([$nombre, $email, $edad, $rol, $id]);
  header("Location: lista.php");
  exit;
+  }
 }
 ?>
 <!DOCTYPE html>
@@ -35,7 +39,9 @@ id=?");
  <option value="admin" <?= $usuario['rol']=='admin'?'selected':'' ?>>Administrador</option>
  </select>
  <button class="btn" type="submit">Actualizar</button>
- <!-- Enlace de eliminación: usar la variable correcta $usuario['id'] y confirmar acción -->
+ <?php if (!empty($error)): ?>
+  <p style="color:red;"><?php echo $error; ?></p>
+ <?php endif; ?>
  <a class="btn-delete" href="eliminar.php?id=<?= $usuario['id'] ?>" onclick="return confirm('¿Seguro que quieres eliminar este usuario? Esta acción es definitiva.');">Eliminar este usuario.</a>
  </form>
 </div>

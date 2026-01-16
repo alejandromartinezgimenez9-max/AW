@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         $stmt = $pdo->prepare("INSERT INTO perfil (usuario_id,nombre,email,edad,rol) VALUES (?,?,?,?,?)");
         $stmt->execute([$usuario_id, $nombre, $email, $edad, $rol]);
-        header("Location: lista.php");
+        header("Location: login.php");
         exit;
     }
 }
